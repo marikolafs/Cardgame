@@ -29,4 +29,8 @@ public class Hand {
     return hand.stream().filter(card -> card.getSuit() == 'H').map(PlayingCard::getAsString).collect(
         Collectors.joining(" ", "Heart cards: ", ""));
   }
+
+  public String getCards(){
+    return hand.stream().map(PlayingCard::getAsString).collect(Collectors.joining(" ", "Cards in hand: ", ""));
+  }
 }
